@@ -26,7 +26,7 @@ SECRET_KEY = 'gl(vr8_=e2o=r4-+ye@sf9g@5e=$ckxv3jro+ed=%0@667b@ou'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["niko31.pythonanywhere.com"]
 
 
 # Application definition
