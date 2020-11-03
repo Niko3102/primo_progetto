@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Chi siamo</title>
-</head>
-<body>
-<h3>Siamo quelli che siamo ?</h3>
+{% extends 'base.html'%}
+{%block title%}
+	{{block.super}} | Index
+{%endblock title%}
+
+{%block content%}
+    <h3>Siamo quelli che siamo ?</h3>
 <ol>
     <a href="{% url 'home'%}">Torna homepage</a>
 </ol>
-</body>
-</html>
+{%endblock content%}

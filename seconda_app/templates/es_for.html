@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>for</title>
-</head>
-<body>
-Looping over a sequence of items using <b>forloop.counter</b> variable:
+{% extends 'base.html'%}
+{%block title%}
+	{{block.super}} | Index
+{%endblock title%}
+
+{%block content%}
+   Looping over a sequence of items using <b>forloop.counter</b> variable:
 	<br/>
 	{% for x in list2 %}
 		<i>{{ forloop.counter }} </i> : {{ x }}<br>
@@ -68,6 +67,5 @@ Looping over a sequence of items using <b>forloop.counter</b> variable:
     
     <ol>
         <a href="{% url 'home'%}">Torna homepage</a>
-    </ol>
-</body>
-</html>
+    </ol> 
+{%endblock content%}

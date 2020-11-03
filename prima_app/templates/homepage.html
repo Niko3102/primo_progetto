@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>homepage</title>
-</head>
-<body>
-    <h1>Ciao a tutti! Benvenuti nella homepage!</h1>
+
+    {% extends 'base.html'%}
+{%block title%}
+	{{block.super}} | Index
+{%endblock title%}
+
+{%block content%}
+<h1>Ciao a tutti! Benvenuti nella homepage!</h1>
     <h3>Prima app</h3>
     <ol><li><a href="{% url 'index'%}">index</a></li>
         <li><a href="{% url 'menu'%}">menu</a></li>
@@ -18,6 +18,5 @@
         <li><a href="{% url 'seconda_app:ifelse'%}">esempio ifelse</a></li> 
         <li><a href="{% url 'seconda_app:elif'%}">esempio elif</a></li>   
         <li><a href="{% url 'seconda_app:for'%}">esempio for</a></li>  
-    </ol>
-</body>
-</html>
+    </ol>    
+{%endblock content%}
