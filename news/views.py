@@ -2,13 +2,15 @@ from django.http import HttpResponse
 from .models import Articolo, Giornalista
 
 def home(request):
-    a = ""
-    g = ""
+    a = []
+    g = []
     for art in Articolo.objects.all():
-        a += (art.titolo + "<br>")
+        a.append(art.titolo)
 
     for gio in Giornalista.objects.all():
-        g += (gio.nome + "<br>")
-    response = "Articoli:<br>" + a + "<br>Giornalisti:<br>"+ g
+        g.append(gio.nome)
+
+    response = str(a) + "<br>" + str(g)
+    print(response)
 
     return HttpResponse("<h1>" + response + "</h1>")
