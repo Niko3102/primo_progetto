@@ -20,3 +20,4 @@ class Articolo(models.Model):
           verbose_name_plural = "Articoli"
   def __str__(self):
     return self.titolo
+
