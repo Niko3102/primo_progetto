@@ -1,5 +1,5 @@
 
-    {% extends 'base.html'%}
+{% extends 'base.html'%}
 {%block title%}
 	{{block.super}} | Index
 {%endblock title%}
@@ -18,5 +18,5 @@
         <li><a href="{% url 'seconda_app:ifelse'%}">esempio ifelse</a></li> 
         <li><a href="{% url 'seconda_app:elif'%}">esempio elif</a></li>   
         <li><a href="{% url 'seconda_app:for'%}">esempio for</a></li>  
-    </ol>    
+    </ol> 
 {%endblock content%}

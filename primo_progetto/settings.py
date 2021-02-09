@@ -26,7 +26,7 @@ SECRET_KEY = 'gl(vr8_=e2o=r4-+ye@sf9g@5e=$ckxv3jro+ed=%0@667b@ou'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["niko31.pythonanywhere.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'prima_app',
     'seconda_app',
+    'news',
+    'libreria',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +61,9 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates'),
                  os.path.join(BASE_DIR, 'seconda_app/templates'),
-                 os.path.join(BASE_DIR, 'templates')
+                 os.path.join(BASE_DIR, 'news/templates'),
+                 os.path.join(BASE_DIR, 'libreria/templates'),
+                 os.path.join(BASE_DIR, 'templates'),
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
