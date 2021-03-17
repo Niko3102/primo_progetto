@@ -8,4 +8,3 @@ urlpatterns = [
     path('lista_autori/', AutoreList.as_view(), name='lista_autori'),
     
 ]
-
