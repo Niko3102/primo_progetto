@@ -25,4 +25,6 @@ urlpatterns = [
     path('news/', include('news.urls')),
     path('libreria/', include('libreria.urls')),
     path('forms_app/', include('forms_app.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
+
