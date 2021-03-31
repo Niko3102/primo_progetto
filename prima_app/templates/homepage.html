@@ -18,5 +18,9 @@
         <li><a href="{% url 'seconda_app:ifelse'%}">esempio ifelse</a></li> 
         <li><a href="{% url 'seconda_app:elif'%}">esempio elif</a></li>   
         <li><a href="{% url 'seconda_app:for'%}">esempio for</a></li>  
-    </ol> 
+    </ol>
+    <h3>Visite</h3>
+    <ol>
+        <p>Hai visitato questa pagina {{ num_visits }}{% if num_visits == 1 %} time{% else %} volte{% endif %}.</p>
+    </ol>
 {%endblock content%}

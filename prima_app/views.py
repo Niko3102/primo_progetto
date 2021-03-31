@@ -5,7 +5,13 @@ from django.shortcuts import render
 
 #L1
 def homepage(request):
-    return render(request, "homepage.html")
+    num_visits = request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits + 1
+
+    context = {
+        'num_visits': num_visits,
+    }
+    return render(request, "homepage.html", context=context)
 
 #L2
 def menu(request):
@@ -23,4 +29,3 @@ def variabili(request):
 #L5
 def index(request):
     return render(request, "index.html")
-       
